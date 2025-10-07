@@ -12,7 +12,7 @@ const flash = require("connect-flash");
 
 //connect to mongoDB
 mongoose
-  .connect("mongodb://127.0.0.1:27017/GoogleDB")
+  .connect("process.env.MONGO_URI")
   .then(() => {
     console.log("Connecting to mongoDB...");
   })
