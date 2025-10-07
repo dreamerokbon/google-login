@@ -4,6 +4,11 @@ const User = require("../models/user-model");
 const bcrypt = require("bcrypt");
 const localStrategy = require("passport-local");
 
+const callbackURL =
+  process.env.NODE_ENV === "production"
+    ? process.env.GOOGLE_CALLBACK_URL
+    : process.env.GOOGLE_CALLBACK_URL_LOCAL;
+
 passport.serializeUser((user, done) => {
   console.log("成功進入serializeUser區域");
   console.log(user);
@@ -21,9 +26,7 @@ passport.use(
     {
       clientID: process.env.GOOGLE_CLIENT_ID,
       clientSecret: process.env.GOOGLE_CLIENT_SECRET,
-      callbackURL:
-        process.env.GOOGLE_CALLBACK_URL ||
-        process.env.GOOGLE_CALLBACK_URL_LOCAL,
+      callbackURL,
     },
     async (accessToken, refreshToken, profile, done) => {
       console.log("成功進入googleStrategy區域");
