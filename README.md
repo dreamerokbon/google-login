@@ -56,14 +56,14 @@
 
 ---
 
-🧭 學習重點（What I Learned）
+## 🧭 學習重點（What I Learned）
 
-串接 Passport.js 並整合 Google OAuth + 本地策略
+- 串接 Passport.js 並整合 Google OAuth + 本地策略
 
-設計 Session + Cookie 驗證機制
+- 設計 Session + Cookie 驗證機制
 
-實作 bcrypt 密碼加密與比對流程
+- 實作 bcrypt 密碼加密與比對流程
 
-使用 connect-flash 顯示使用者互動訊息
+- 使用 connect-flash 顯示使用者互動訊息
 
-建立可延伸的 Express 架構（MVC 分層 + 模板渲染）
+- 建立可延伸的 Express 架構（MVC 分層 + 模板渲染）
